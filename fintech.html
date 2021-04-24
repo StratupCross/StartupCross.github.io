@@ -228,32 +228,32 @@ function Exolve(puzzleSpec,
   this.scriptLowerCaseRE = null
 
   this.colorScheme = {
-    'background': 'white',
-    'cell': 'lightgrey',
-    'active': 'mistyrose',
-    'currclue': 'white',
+    'background': 'transparent',
+    'cell': 'white',
+    'active': 'rgba(255,228,225,0.6)',
+    'currclue': 'transparent',
     'orphan': 'linen',
     'input': '#ffb6b4',
-    'light-label': 'black',
+    'light-label': 'rgba(255,228,225,0.25)',
     'light-text': 'black',
     'light-label-input': 'black',
     'light-text-input': 'black',
     'circle': 'gray',
     'circle-input': 'gray',
     'caret': 'gray',
-    'arrow': 'mistyrose',
+    'arrow': 'rgb(21,244,238)',
     'prefill': 'blue',
     'anno': 'darkgreen',
-    'solved': 'dodgerblue',
+    'solved': 'rgb(21,244,238)',
     'rutvik': 'darkgreen',
     'separator': 'blue',
-    'imp-text': 'darkgreen',
+    'imp-text': 'white',
     'button': '#4caf50',
     'button-text': 'white',
     'button-hover': 'darkgreen',
     'small-button': 'inherit',
     'small-button-text': 'darkgreen',
-    'small-button-hover': 'lightpink',
+    'small-button-hover': 'white',
   }
 
   this.nextLine = 0
@@ -371,10 +371,10 @@ Exolve.prototype.init = function() {
 
   const basicHTML = `
     <div class="xlv-frame xlv-flex-col" id="${this.prefix}-frame">
-      <h2 id="${this.prefix}-title" class="xlv-title"></h2>
+      <h2 style="color:white;" id="${this.prefix}-title" class="xlv-title"></h2>
       <div id="${this.prefix}-setter" class="xlv-setter"></div>
       <div id="${this.prefix}-preamble" class="xlv-preamble"></div>
-      <div id="${this.prefix}-curr-clue-parent" class="xlv-curr-clue-parent">
+      <div style="color:white;" id="${this.prefix}-curr-clue-parent" class="xlv-curr-clue-parent">
         <div id="${this.prefix}-curr-clue" class="xlv-curr-clue"></div>
       </div>
       <div class="xlv-flex-row">
@@ -473,19 +473,19 @@ Exolve.prototype.init = function() {
           <br/>
         </div> <!-- xlv-grid-panel -->
         <div id="${this.prefix}-clues" class="xlv-flex-row xlv-clues">
-          <div id="${this.prefix}-across-clues-panel" class="xlv-clues-box"
+          <div style="color:white;" id="${this.prefix}-across-clues-panel" class="xlv-clues-box"
               style="display:none">
             <hr/>
-            <span id="${this.prefix}-across-label"
+            <span style="color:white;" id="${this.prefix}-across-label"
                 style="font-weight:bold"
                    >${this.textLabels['across-label']}</span>
             <table id="${this.prefix}-across"></table>
             <br/>
           </div>
-          <div id="${this.prefix}-down-clues-panel" class="xlv-clues-box"
+          <div style="color:white;" id="${this.prefix}-down-clues-panel" class="xlv-clues-box"
               style="display:none">
             <hr/>
-            <span id="${this.prefix}-down-label"
+            <span style="color:white;" id="${this.prefix}-down-label"
                 style="font-weight:bold">${this.textLabels['down-label']}</span>
             <table id="${this.prefix}-down"></table>
             <br/>
@@ -5834,15 +5834,15 @@ function createPuzzle() {
 }
 .xlv-question {
   margin: 20px 0 20px 0;
+  color: white;
 }
 .xlv-answer {
-  border: none;
-  padding: 0 0 6px 0;
+  border: solid;
+  color: yellow;
+  padding: 0 0 3px 0;
   outline: none;
   font-family: monospace;
   font-size: 12px;
-  background-image:
-    repeating-linear-gradient(to bottom, white, white 13px, black 14px);
 }
 .xlv-incluefill {
   border: none;
@@ -5920,7 +5920,7 @@ function createPuzzle() {
 
  <h2><p style="color:red;" "font-size:50px;">PS: THE WORDS IN BETWEEN "" IN THE CLUE ARE VERY VERY CLOSLEY RELATED TO THE STARTUP NAME </p></h2> 
 </head>
-<body style="background-color:'#1f2527';">
+<body style="background-color:rgb(31,37,39);">
   
 <script>
   createExolve(puzzleText);
