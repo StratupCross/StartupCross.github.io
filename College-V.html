@@ -34,48 +34,47 @@ const puzzleText = `
 ======REPLACE WITH YOUR PUZZLE BELOW======
 exolve-begin
   exolve-id: some-unique-identifier
-  exolve-title: KINGS OF FINTECH SECTOR
+  exolve-title: COLLEGE REUNION PARTY FT. STARTUPS
   exolve-setter: NP 
   exolve-copyright: 2021 Copyright NP
-  exolve-width: 16
-  exolve-height: 16
+  exolve-width: 13
+  exolve-height: 13
   exolve-grid:
-    ............U.M.
-    ............P.O.
-    LENDINGKART.S.B.
-    ...I........T.I.
-    ...G..PAGARBOOK.
-    .I.I..I.....X.W.
-    .N.T..N...C...I.
-    .S.I..E...H...K.
-    .T.N..L...A.....
-    PAISABAZAAR.....
-    .M.U..B...GROWW.
-    .O.R.MSWIPE.....
-    .J.A......B.....
-    COINDCX..ZERODHA
-    ...C......E.....
-    COVERFOX........
+    RAPIDO......Z
+    .....L.PRACTO
+    ...BOAT.E...M
+    ....Y...B...A
+    .U.COOLBERG.T
+    .R......L...O
+    .BEWAKOOF....
+    .A......O..G.
+    .N....ZOOMCAR
+    .C......D..A.
+    .L.REDBUS..N.
+    .A.........A.
+    .PHONEPE.....
   exolve-across:
-    3 Provides small businesses with credit to fill their "cart" with raw materials or other daily buisness expenses for future prodcution. // moderate // (11) https://www.lendingkart.com/
-    5 This product is a saviour for small businesses when amount of "salary" of employee is in talks. // moderate // (9) https://pagarbook.com/
-    8 The sister brand of well known insurance aggregator, this brand sells "paisa" in form of loans and credit cards. // moderate // (11) https://www.paisabazaar.com/
-    9 Your investments "grow" with them just like their valuation grew to 1 billion dollar plus a few days back. // easy // (5) https://groww.in/
-    10 Providing low cost card "swiping" machines to small buisnesses to accept payments. // easy // (6) https://www.mswipe.com/
-    11 The most popular Indian trading platform dealing in "coins" // easy // (7) https://coindcx.com/
-    12 This firm's varsity is teaching people for Rs "zero" about trading. // easy // (7) https://zerodha.com/varsity/
-    13 "Covers" up for your deeds when you bang your fathers car badly. // easy // (8) https://www.coverfox.com/
+    1 The "rapid" service of this rental startup didn’t allow the usual latecomer to give mumbai traffic as excuse. (6)
+    4 When your stomach is upset with the party drinks,your "practical" brain video calls the doctor. (6)
+    6 In house electronic gadget doesn't let the partyvibe "sink" (4)
+    9 The ultimate Indian solution for your friend's "non alcoholic" drink choice, in the party. (8)
+    10 Your friend - popularly known as a "fool", orders his party clothes from them. (8)
+    12 In a mood to drive from Borivali to Colaba,oops! don’t own a car,just "rent" one (7)
+    13 One of your friend comes to Bombay from Ahmedabad with 56 others via "road",because of tight budget. (6)
+    14 When the party host pays using the "phone" for 'Kanjoos' friends auto fare. (7)
   exolve-down:
-    1 Another new gen trading platform taking their credibility "up" with the 2021 IPL ads. // easy // (6) https://www.youtube.com/watch?v=9YAF685kYE0
-    2 They take pride in pioneering digital wallets helping you pay your bills in a "quick" and safe manner. // easy // (8) https://www.mobikwik.com/
-    4 Helps you secure your costly 6 to 8 "digit" car,house etc from damages. // 2 WORDS WITHOUT SPACE // moderate // (14) https://www.godigit.com/
-    5 Unicorn digital "labs" providing payment and invoice solutions, ever seen them on a shop's card swiping machine. // 2 WORDS WITHOUT SPACE // easy // (8) https://www.pinelabs.com/
-    6 God's gift for freelancers , solopreneurs set up online stores and "instantly" collect payments all together. // moderate // (9) https://www.instamojo.com/
-    7 Our latest 2021 uicorn known for its software solutions helping buisnesses "charge" their customers. // easy // (9) https://www.chargebee.com/
+    2 Drink and drive is not safe after party, hence call a "cab" (3)
+    3 Who brought such a variety of food? Not the party host,he was lazing on the couch "ordering".
+    5 From biryani to pizzas to wraps, this brand brings everything on the party platter, so don’t start a "rebellion" // 2 words no space// (10)
+    7 The "hospitality" startup service your 'Amdavadi' friend uses for nightstay, though people generally go there to mingle [PS: Popular opinion] (3)
+    8 Credit their in house services, for the compliments and "claps" you receive for your hairstyle. // 2 words no space// (9)
+    11 The party host searching for party "songs" on this app. (5)
 
-   exolve-question: Your name - Feedback. Thank you for trying out the crossword. 
+   exolve-question: Your name*
+   exolve-question: Email ID*
+   exolve-question: Phone No.*
   
-   exolve-submit: https://docs.google.com/forms/d/e/1FAIpQLSenL_jlD0YJM0nfyuI7Sz3twkYo52xgZirbPHk7t2xUm-SZCA/formResponse?submit=SUBMIT entry.676048372 entry.240002156
+   exolve-submit: https://docs.google.com/forms/d/e/1FAIpQLSfDg2yWl1EWoXfv86o_9v7Qzj_jNiVRuAehFp20ajDkRzyxNw/formResponse?submit=SUBMIT entry.475705859 entry.1630837537 entry.362460449 entry.752963019=9
 exolve-end
 ======REPLACE WITH YOUR PUZZLE ABOVE======
 `;
@@ -408,11 +407,11 @@ Exolve.prototype.init = function() {
               </div> <!-- xlv-button-row-1 -->
               <div id="${this.prefix}-button-row-2" class="xlv-controls-row">
                 <button id="${this.prefix}-reveal" class="xlv-button"
-                    style="display:none">${this.textLabels['reveal']}</button>
+                    style="visibility:hidden">${this.textLabels['reveal']}</button>
                 <button id="${this.prefix}-ninas" class="xlv-button"
                   style="display:none">${this.textLabels['show-ninas']}</button>
                 <button id="${this.prefix}-reveal-all" class="xlv-button"
-                  style="display:none">${this.textLabels['reveal-all']}</button>
+                  style="visibility:hidden">${this.textLabels['reveal-all']}</button>
               </div> <!-- xlv-button-row-2 -->
             </div> <!-- xlv-controls -->
             <div id="${this.prefix}-errors" class="xlv-errors"></div>
